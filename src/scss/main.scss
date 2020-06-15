@@ -1,0 +1,148 @@
+.container {
+  margin: 20px;
+}
+
+.grey {
+  color: #cccccc;
+}
+
+.check-group {
+  margin: 0 20px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 15px;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 60px;
+}
+
+.info {
+  background: url("../../assets/info.svg") no-repeat;
+}
+
+.close {
+  background: url("../../assets/close.svg") no-repeat;;
+}
+
+.text {
+  margin: 10px;
+  font-size: 12px;
+}
+
+.textCheck {
+  font-size: 14px;
+}
+
+.salary {
+  margin-left: 30px;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  background: #5e6bab;
+  color: #fff;
+  top: 30px;
+  left: 90px;
+  width: 200px;
+  height: 90px;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: -0.5em;
+  border: 10px solid transparent;
+  border-left: 10px solid #5e6bab;
+}
+
+.hint, .icon:hover ~ .tooltip {
+  visibility: visible;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  width: 38px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #f0a522;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #f0a522;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.sum {
+  border-radius: 15px;
+  border: 1px solid grey;
+  padding-left: 8px;
+  margin-right: 10px;
+}
+
+.sum:focus {
+  outline: none;
+  box-shadow: 0px 0px 2px #0066ff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.details {
+  font-size: 12px;
+  width: 300px;
+  background: #fbf3db;
+  padding: 15px;
+}
