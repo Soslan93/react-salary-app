@@ -115,7 +115,6 @@ input:checked + .slider:before {
   transform: translateX(16px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -142,7 +141,35 @@ input:checked + .slider:before {
 
 .details {
   font-size: 12px;
-  width: 300px;
+  width: 350px;
   background: #fbf3db;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='radio'] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid gray;
+}
+
+input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 70%;
+  margin: 18% auto;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+  background: #000;
+}
+
+input[type="radio"]:checked {
+  border-color:#000;
 }

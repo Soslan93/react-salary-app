@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux'
 import {Field, reduxForm, formValueSelector, WrappedFieldInputProps} from 'redux-form';
 import classNames from 'classnames';
-import { getTotalSum, salaryTypes } from "./helpers/payroll";
+import { getTotalSum, salaryTypes, getTariffRate } from "./helpers/payroll";
 import { InjectedFormProps } from "redux-form";
 
 export interface IState {
@@ -104,7 +104,7 @@ const App: React.FC<InjectedFormProps<IState>> = (props: any) => {
                             component={Input}
                             type="text"
                         />
-                      <label className="bold">₽ в день</label>
+                      <label className="bold">₽ {getTariffRate(props.salaryType)}</label>
                     </div>
                 </div>
             </div>}
